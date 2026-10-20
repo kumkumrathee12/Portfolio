@@ -9,10 +9,10 @@
 /* ─── TYPING ANIMATION ─────────────────────────────────── */
 const ROLES = [
   'Full-Stack Developer',
-  'B.Tech IT Student',
+  'AI Application Builder',
+  'Competitive Programmer (500+ LC)',
   'AI/ML Researcher',
-  'Competitive Programmer',
-  'Open Source Builder',
+  'B.Tech IT Student',
 ];
 
 let roleIdx = 0, charIdx = 0, isDeleting = false;
