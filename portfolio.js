@@ -9,6 +9,7 @@
 /* ─── TYPING ANIMATION ─────────────────────────────────── */
 const ROLES = [
   'Full-Stack Developer',
+  '2x SIH Internal Winner',
   'AI Application Builder',
   'Competitive Programmer (500+ LC)',
   'AI/ML Researcher',
@@ -232,6 +233,69 @@ if (yearEl) {
   yearEl.innerHTML = yearEl.innerHTML.replace(/\d{4}/, yr);
 }
 
+
+/* ─── RESUME MODAL & DROPDOWN CONTROLLERS ────────────────── */
+const resumeModal = document.getElementById('resume-modal');
+const resumeDropdown = document.getElementById('resume-dropdown');
+const navResumeBtn = document.getElementById('nav-resume-btn');
+
+function openResumeModal() {
+  if (!resumeModal) return;
+  resumeModal.style.display = 'flex';
+  document.body.style.overflow = 'hidden';
+  // Small tick for CSS transition
+  requestAnimationFrame(() => {
+    resumeModal.classList.add('active');
+  });
+}
+
+function closeResumeModal() {
+  if (!resumeModal) return;
+  resumeModal.classList.remove('active');
+  setTimeout(() => {
+    resumeModal.style.display = 'none';
+    document.body.style.overflow = '';
+  }, 220);
+}
+
+// Close modal when clicking backdrop
+if (resumeModal) {
+  resumeModal.addEventListener('click', (e) => {
+    if (e.target === resumeModal) {
+      closeResumeModal();
+    }
+  });
+}
+
+// Close on Escape key
+window.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape' && resumeModal && resumeModal.classList.contains('active')) {
+    closeResumeModal();
+  }
+});
+
+// Dropdown toggle
+function toggleResumeDropdown(e) {
+  if (e) e.stopPropagation();
+  if (!resumeDropdown) return;
+  const isOpen = resumeDropdown.classList.toggle('open');
+  if (navResumeBtn) {
+    navResumeBtn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+  }
+}
+
+function closeResumeDropdown() {
+  if (resumeDropdown) {
+    resumeDropdown.classList.remove('open');
+    if (navResumeBtn) navResumeBtn.setAttribute('aria-expanded', 'false');
+  }
+}
+
+document.addEventListener('click', (e) => {
+  if (resumeDropdown && !resumeDropdown.contains(e.target)) {
+    closeResumeDropdown();
+  }
+});
 
 /* ─── CONSOLE EASTER EGG ────────────────────────────────── */
 console.log(

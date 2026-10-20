@@ -4,10 +4,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Kumkum Rathee - B.Tech IT Student | Portfolio &amp; Resume</title>
-  <meta name="description" content="Portfolio of Kumkum Rathee - B.Tech IT student at BPIT Delhi with 9.5 CGPA, 500+ LeetCode problems, AI/ML research in Taylor and Francis, SIH internal round winner, and full-stack developer." />
-  <meta name="keywords" content="Kumkum Rathee, resume, portfolio, B.Tech IT, BPIT Delhi, developer, full-stack, JavaScript, Firebase, SmartSync, SmartTour, MineGov AI" />
+  <meta name="description" content="Portfolio of Kumkum Rathee - B.Tech IT student at BPIT Delhi with 9.5 CGPA, 500+ LeetCode problems, AI/ML research in Taylor and Francis, 2-time SIH internal round winner, and full-stack developer." />
+  <meta name="keywords" content="Kumkum Rathee, resume, portfolio, B.Tech IT, BPIT Delhi, developer, full-stack, JavaScript, Firebase, SmartSync, SmartTour, MineGov AI, SIH Winner" />
   <meta property="og:title" content="Kumkum Rathee - Developer Portfolio" />
-  <meta property="og:description" content="B.Tech IT student with 9.5 CGPA, published researcher, 500+ LeetCode, full-stack developer." />
+  <meta property="og:description" content="B.Tech IT student with 9.5 CGPA, 2x SIH internal winner, published researcher, 500+ LeetCode, full-stack developer." />
   <meta property="og:type" content="website" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -32,9 +32,36 @@
           <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3a7 7 0 0 0 9.79 9.79z"/></svg>
           <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:none"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
         </button>
-        <a href="assets/Kumkum_Rathee_Resume.pdf" download="Kumkum_Rathee_Resume.pdf" target="_blank" class="nav-resume-btn" id="nav-resume-btn">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="15" height="15"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-          Resume
+        <div class="resume-dropdown" id="resume-dropdown">
+          <button class="nav-resume-btn" id="nav-resume-btn" type="button" aria-haspopup="true" aria-expanded="false" onclick="toggleResumeDropdown(event)">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="15" height="15"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+            Resume
+            <svg class="dropdown-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="12" height="12"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="resume-menu" id="resume-menu">
+            <button class="resume-menu-item" type="button" onclick="openResumeModal(); closeResumeDropdown();">
+              <div class="rm-item-icon ic-purple">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="15" height="15"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+              </div>
+              <div class="rm-item-text">
+                <span class="rm-item-title">View Resume</span>
+                <span class="rm-item-sub">Preview in browser</span>
+              </div>
+            </button>
+            <a href="assets/Kumkum_Rathee_Resume.pdf" download="Kumkum_Rathee_Resume.pdf" target="_blank" class="resume-menu-item" onclick="closeResumeDropdown();">
+              <div class="rm-item-icon ic-blue">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="15" height="15"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+              </div>
+              <div class="rm-item-text">
+                <span class="rm-item-title">Download PDF</span>
+                <span class="rm-item-sub">Save to device</span>
+              </div>
+            </a>
+          </div>
+        </div>
+        <a href="https://www.linkedin.com/in/kumkum-rathee-825423324/" target="_blank" rel="noopener" class="nav-linkedin-btn" title="LinkedIn Profile" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+          LinkedIn
         </a>
         <a href="https://github.com/kumkumrathee12" target="_blank" rel="noopener" class="nav-gh-btn">
           <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.02 10.02 0 0 0 22 12.017C22 6.484 17.522 2 12 2z"/></svg>
@@ -56,6 +83,16 @@
       <li><a href="#experience" class="nav-link" id="mob-experience">Journey</a></li>
       <li><a href="#contact" class="nav-link" id="mob-contact">Contact</a></li>
     </ul>
+    <div class="mob-drawer-resume">
+      <button type="button" class="mob-resume-btn mob-view" onclick="openResumeModal()">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+        View Resume
+      </button>
+      <a href="assets/Kumkum_Rathee_Resume.pdf" download="Kumkum_Rathee_Resume.pdf" target="_blank" class="mob-resume-btn mob-download">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        Download Resume
+      </a>
+    </div>
   </div>
 
   <!-- HERO -->
@@ -78,12 +115,14 @@
             <span id="typing-text"></span><span class="cursor">|</span>
           </span>
         </div>
-        <p class="hero-sub">B.Tech IT student at <strong>BPIT Delhi</strong>, building production-grade web apps, solving algorithmic challenges, and researching AI/ML systems.</p>
+        <p class="hero-sub">B.Tech IT student at <strong>BPIT Delhi</strong> &bull; <strong>2x SIH Internal Winner</strong>, building production-grade web apps, solving algorithmic challenges, and researching AI/ML systems.</p>
 
         <div class="hero-stats">
           <div class="hstat"><div class="hstat-num">9.5</div><div class="hstat-lbl">CGPA / 10</div></div>
           <div class="hstat-sep"></div>
           <div class="hstat"><div class="hstat-num">500+</div><div class="hstat-lbl">LeetCode</div></div>
+          <div class="hstat-sep"></div>
+          <div class="hstat"><div class="hstat-num">2x</div><div class="hstat-lbl">SIH Internal</div></div>
           <div class="hstat-sep"></div>
           <div class="hstat"><div class="hstat-num">4+</div><div class="hstat-lbl">Projects</div></div>
           <div class="hstat-sep"></div>
@@ -91,13 +130,17 @@
         </div>
 
         <div class="hero-ctas">
-          <a href="#projects" class="btn-primary" id="hero-view-work">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
-            View My Work
-          </a>
+          <button type="button" class="btn-view-resume" id="hero-view-resume" onclick="openResumeModal()">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+            View Resume
+          </button>
           <a href="assets/Kumkum_Rathee_Resume.pdf" download="Kumkum_Rathee_Resume.pdf" target="_blank" class="btn-resume" id="hero-resume">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
             Download Resume
+          </a>
+          <a href="#projects" class="btn-primary" id="hero-view-work">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+            View My Work
           </a>
           <a href="#contact" class="btn-outline" id="hero-contact">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
@@ -106,13 +149,17 @@
         </div>
 
         <div class="hero-socials">
-          <a href="mailto:kumkumrathee000@gmail.com" class="social-chip" id="hero-email-link">
+          <a href="mailto:kumkumrathee2@gmail.com" class="social-chip" id="hero-email-link">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-            kumkumrathee000@gmail.com
+            kumkumrathee2@gmail.com
           </a>
           <a href="https://github.com/kumkumrathee12" target="_blank" rel="noopener" class="social-chip" id="hero-github-link">
             <svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.02 10.02 0 0 0 22 12.017C22 6.484 17.522 2 12 2z"/></svg>
             GitHub
+          </a>
+          <a href="https://www.linkedin.com/in/kumkum-rathee-825423324/" target="_blank" rel="noopener" class="social-chip" id="hero-linkedin-link">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+            LinkedIn
           </a>
           <span class="social-chip location-chip">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
@@ -137,6 +184,7 @@
   <span class="cs">role</span>: <span class="cq">"Full-Stack Dev"</span>,
   <span class="cs">cgpa</span>: <span class="cn">9.5</span>,
   <span class="cs">leetcode</span>: <span class="cq">"500+"</span>,
+  <span class="cs">sih</span>: <span class="cq">"2x Winner 🏆"</span>,
   <span class="cs">status</span>: <span class="cq">"Building 🚀"</span>
 };</pre>
         </div>
@@ -159,13 +207,13 @@
         <div class="about-text-block card reveal-up">
           <p>I'm <strong>Kumkum Rathee</strong>, a B.Tech Information Technology student at <strong>Bhagwan Parshuram Institute of Technology (BPIT), Delhi</strong>, maintaining a stellar <strong>CGPA of 9.5/10</strong>.</p>
           <p>I'm a passionate full-stack developer who loves building elegant, scalable web applications &mdash; from real-time logistics dashboards to AI-powered travel planners. I believe in clean code, thoughtful design, and shipping projects that matter.</p>
-          <p>Beyond coding, I've published AI/ML research in <strong>Taylor &amp; Francis</strong>, cleared the college internal round of the <strong>Smart India Hackathon (SIH)</strong>, and consistently grind through algorithmic problem-solving with <strong>500+ LeetCode problems</strong> solved.</p>
+          <p>Beyond coding, I've published AI/ML research in <strong>Taylor &amp; Francis</strong>, won the college internal round of the <strong>Smart India Hackathon (SIH) twice (2x Internal Winner)</strong>, and consistently grind through algorithmic problem-solving with <strong>500+ LeetCode problems</strong> solved.</p>
           <div class="about-tags">
             <span class="atag">🎓 B.Tech IT &mdash; BPIT Delhi</span>
             <span class="atag">🧠 AI/ML Researcher</span>
             <span class="atag">💻 Full-Stack Developer</span>
             <span class="atag">⚡ Competitive Programmer</span>
-            <span class="atag">🏆 SIH Internal Cleared</span>
+            <span class="atag">🏆 2x SIH Internal Winner</span>
             <span class="atag">📖 Published Author</span>
           </div>
         </div>
@@ -187,14 +235,13 @@
             <div class="hl-icon ic-orange">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
             </div>
-            <div><div class="hl-title">SIH Internal Round Winner</div><div class="hl-sub">Smart India Hackathon &bull; MineGov AI</div></div>
+            <div><div class="hl-title">2x SIH Internal Winner</div><div class="hl-sub">Smart India Hackathon &bull; BPIT Internal Rounds</div></div>
           </div>
           <div class="highlight-card card">
             <div class="hl-icon ic-green">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
             </div>
             <div><div class="hl-title">LeetCode Grinder</div><div class="hl-sub">500+ problems &bull; DSA &amp; Algorithms</div></div>
-          </div>ms Â· DSA &amp; Algorithms</div></div>
           </div>
         </div>
       </div>
@@ -272,13 +319,13 @@
 
         <div class="proj-card card reveal-up" style="animation-delay:0.16s" id="project-minegov">
           <div class="proj-header">
-            <div class="proj-badges"><span class="pbadge prize">🏆 SIH Internal Cleared</span><span class="pbadge ai-badge">AI/ML</span></div>
+            <div class="proj-badges"><span class="pbadge prize">🏆 2x SIH Internal Winner</span><span class="pbadge ai-badge">AI/ML</span></div>
             <div class="proj-links">
               <a href="https://github.com/kumkumrathee12" target="_blank" rel="noopener" class="proj-btn gh-btn" id="minegov-source">Source</a>
             </div>
           </div>
           <h3 class="proj-title">MineGov AI &mdash; Smart India Hackathon Project</h3>
-          <p class="proj-desc">An AI-powered governance solution for mining regulatory compliance, developed for Smart India Hackathon. Leverages ML to automate regulatory checks, detect anomalies in mining operations, and streamline government approval workflows &mdash; successfully clearing the college internal round for SIH 2024.</p>
+          <p class="proj-desc">An AI-powered governance solution for mining regulatory compliance, developed for Smart India Hackathon. Leverages ML to automate regulatory checks, detect anomalies in mining operations, and streamline government approval workflows &mdash; contributing to winning the prestigious college internal round twice for SIH.</p>
           <div class="proj-tech"><span class="ptag">Python</span><span class="ptag">Machine Learning</span><span class="ptag">Flask</span><span class="ptag">React</span><span class="ptag">AI/ML</span><span class="ptag">Data Analysis</span></div>
         </div>
 
@@ -321,11 +368,11 @@
           <div class="tl-dot ic-orange"></div>
           <div class="tl-connector"></div>
           <div class="tl-content card">
-            <div class="tl-date">2024</div>
-            <h3 class="tl-title">Smart India Hackathon &mdash; Internal Round Winner</h3>
-            <div class="tl-place">BPIT College Round &bull; Ministry of Mines Problem Statement</div>
-            <p class="tl-desc">Led a team to develop <strong>MineGov AI</strong> &mdash; an AI-powered solution for automating mining regulatory compliance. Led the team to victory in the competitive college internal round for SIH 2024.</p>
-            <div class="tl-tags"><span class="tltag">SIH 2024</span><span class="tltag">AI/ML</span><span class="tltag">Team Lead</span><span class="tltag">Internal Winner</span></div>
+            <div class="tl-date">2-Time Winner &bull; 2023 &amp; 2024</div>
+            <h3 class="tl-title">Smart India Hackathon &mdash; 2x Internal Round Winner</h3>
+            <div class="tl-place">BPIT College Rounds &bull; Smart India Hackathon</div>
+            <p class="tl-desc">Cleared the college internal rounds of the Smart India Hackathon (SIH) <strong>twice</strong> across consecutive editions. Built high-impact solutions including <strong>MineGov AI</strong> (automated mining compliance for Ministry of Mines), showcasing leadership, technical acumen, and agile teamwork.</p>
+            <div class="tl-tags"><span class="tltag">2x SIH Winner</span><span class="tltag">SIH Internal Cleared</span><span class="tltag">Team Lead</span><span class="tltag">AI/ML</span></div>
           </div>
         </div>
 
@@ -380,17 +427,17 @@
             <h3 class="contact-info-title">Contact Information</h3>
             <p class="contact-info-sub">I'm always open to discussing new projects, creative ideas, or opportunities to be part of something great.</p>
             <div class="contact-items">
-              <a href="mailto:kumkumrathee000@gmail.com" class="citem" id="contact-email">
+              <a href="mailto:kumkumrathee2@gmail.com" class="citem" id="contact-email">
                 <div class="citem-icon ic-purple"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
-                <div><div class="citem-label">Email</div><div class="citem-value">kumkumrathee000@gmail.com</div></div>
+                <div><div class="citem-label">Email</div><div class="citem-value">kumkumrathee2@gmail.com</div></div>
               </a>
               <a href="https://github.com/kumkumrathee12" target="_blank" rel="noopener" class="citem" id="contact-github">
                 <div class="citem-icon ic-blue"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.02 10.02 0 0 0 22 12.017C22 6.484 17.522 2 12 2z"/></svg></div>
                 <div><div class="citem-label">GitHub</div><div class="citem-value">github.com/kumkumrathee12</div></div>
               </a>
-              <a href="https://linkedin.com/in/kumkumrathee" target="_blank" rel="noopener" class="citem" id="contact-linkedin">
+              <a href="https://www.linkedin.com/in/kumkum-rathee-825423324/" target="_blank" rel="noopener" class="citem" id="contact-linkedin">
                 <div class="citem-icon ic-green"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg></div>
-                <div><div class="citem-label">LinkedIn</div><div class="citem-value">linkedin.com/in/kumkumrathee</div></div>
+                <div><div class="citem-label">LinkedIn</div><div class="citem-value">kumkum-rathee-825423324</div></div>
               </a>
               <div class="citem" id="contact-location">
                 <div class="citem-icon ic-orange"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
@@ -443,7 +490,7 @@
       <div class="footer-top">
         <div class="footer-brand">
           <a href="#hero" class="footer-logo">kumkum<span class="dot">.</span>dev</a>
-          <p>B.Tech IT Student Â· Full-Stack Developer Â· Researcher</p>
+          <p>B.Tech IT Student &bull; Full-Stack Developer &bull; Researcher</p>
         </div>
         <div class="footer-links">
           <a href="#about">About</a>
@@ -456,10 +503,10 @@
           <a href="https://github.com/kumkumrathee12" target="_blank" rel="noopener" aria-label="GitHub" id="footer-github">
             <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.02 10.02 0 0 0 22 12.017C22 6.484 17.522 2 12 2z"/></svg>
           </a>
-          <a href="https://linkedin.com/in/kumkumrathee" target="_blank" rel="noopener" aria-label="LinkedIn" id="footer-linkedin">
+          <a href="https://www.linkedin.com/in/kumkum-rathee-825423324/" target="_blank" rel="noopener" aria-label="LinkedIn" id="footer-linkedin">
             <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
           </a>
-          <a href="mailto:kumkumrathee000@gmail.com" aria-label="Email" id="footer-email">
+          <a href="mailto:kumkumrathee2@gmail.com" aria-label="Email" id="footer-email">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
           </a>
         </div>
@@ -472,6 +519,44 @@
       </div>
     </div>
   </footer>
+
+  <!-- RESUME VIEWER MODAL -->
+  <div class="resume-modal-backdrop" id="resume-modal" role="dialog" aria-modal="true" aria-labelledby="resume-modal-title" style="display:none">
+    <div class="resume-modal">
+      <div class="resume-modal-header">
+        <div class="rm-header-info">
+          <div class="rm-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+          </div>
+          <div>
+            <h3 id="resume-modal-title">Kumkum Rathee &mdash; Resume</h3>
+            <span class="rm-badge">B.Tech IT &bull; BPIT Delhi &bull; 9.5 CGPA</span>
+          </div>
+        </div>
+        <div class="rm-header-actions">
+          <a href="assets/Kumkum_Rathee_Resume.pdf" download="Kumkum_Rathee_Resume.pdf" class="btn-modal-download" id="modal-download-btn">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            Download PDF
+          </a>
+          <a href="assets/Kumkum_Rathee_Resume.pdf" target="_blank" rel="noopener" class="btn-modal-tab" title="Open in New Tab" aria-label="Open in New Tab">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+          </a>
+          <button type="button" class="btn-modal-close" onclick="closeResumeModal()" title="Close" aria-label="Close modal">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+          </button>
+        </div>
+      </div>
+      <div class="resume-modal-body">
+        <iframe src="assets/Kumkum_Rathee_Resume.pdf#toolbar=1&navpanes=0" class="resume-iframe" id="resume-iframe" title="Kumkum Rathee Resume Preview"></iframe>
+        <div class="resume-iframe-fallback">
+          <span>Trouble viewing the inline preview?</span>
+          <a href="assets/Kumkum_Rathee_Resume.pdf" target="_blank" rel="noopener" class="fallback-link">Open PDF in New Tab</a>
+          <span>or</span>
+          <a href="assets/Kumkum_Rathee_Resume.pdf" download="Kumkum_Rathee_Resume.pdf" class="fallback-download">Download Directly</a>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <script src="portfolio.js"></script>
 </body>
